@@ -1,0 +1,83 @@
+modules:
+  jira:globalPage:
+    - key: forge-app-hello-world-page
+      resource: main
+      resolver:
+        function: resolver
+      title: Forge App testing
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  id: ari:cloud:ecosystem::app/89749f01-f8b3-44d5-a6c7-0543093d3208
+permissions:
+  scopes:
+    - write:issue:jira
+    - delete:issue:jira
+    - read:issue:jira
+    - read:issue-meta:jira
+    - read:priority:jira
+    - read:attachment:jira
+    - write:attachment:jira # +
+    # - delete:attachment:jira
+    - read:issue-field-values:jira
+    - write:user.property:jira # +
+    - read:issue-details:jira
+    - read:field-configuration:jira
+    - read:status:jira
+    - read:issue.changelog:jira
+    - read:issue.vote:jira
+    - read:issue-security-level:jira
+    - read:user:jira
+    - read:field:jira
+    - read:comment.property:jira
+    - read:issue-type.property:jira # +
+    - read:dashboard.property:jira # +
+    - read:issue.property:jira # +
+    - read:group:jira
+    - read:application-role:jira
+    - delete:user.property:jira
+    - read:avatar:jira
+    - read:jira-work # +
+    # - write:avatar:jira
+    # - delete:avatar:jira
+    - read:project.avatar:jira
+    - write:project.avatar:jira
+    # - delete:project.avatar:jira
+    - read:user.property:jira
+    - read:issue-worklog.property:jira # +
+    - read:issue-type:jira
+    - read:issue-type-scheme:jira
+    - write:issue-type:jira
+    - read:project:jira
+    - read:project.property:jira # +
+    - read:workflow.property:jira # +
+    - read:issue-type-hierarchy:jira
+    - read:project-category:jira
+    - read:project-version:jira
+    - read:project.component:jira # +
+    - read:label:jira
+    - write:comment:jira # +
+    - write:comment.property:jira # +
+    - storage:app
+    - read:customer:jira-service-management
+    # - write:customer:jira-service-management
+    - read:organization:jira-service-management
+    # - write:organization:jira-service-management
+    # - delete:organization:jira-service-management
+    - read:requesttype.property:jira-service-management
+    - write:requesttype.property:jira-service-management
+    # - delete:requesttype.property:jira-service-management
+    - read:requesttype:jira-service-management
+    - write:requesttype:jira-service-management
+    - read:servicedesk.property:jira-service-management
+    - write:issue.property:jira
+  content:
+    styles:
+      - unsafe-inline
+    scripts:
+      - unsafe-inline
+      - unsafe-hashes
