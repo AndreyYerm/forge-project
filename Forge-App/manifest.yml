@@ -42,7 +42,7 @@ permissions:
     - delete:user.property:jira
     - read:avatar:jira
     - read:jira-work # +
-    # - write:avatar:jira
+    - write:avatar:jira
     # - delete:avatar:jira
     - read:project.avatar:jira
     - write:project.avatar:jira
